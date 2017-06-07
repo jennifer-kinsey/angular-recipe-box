@@ -5,7 +5,7 @@ import { Recipe } from './recipe.model';
   selector: 'recipe-list',
   template: `
   <ul>
-    <li *ngFor="let currentRecipe of childRecipeList">{{currentRecipe.title}} - Rating: {{currentRecipe.rating}}
+    <li *ngFor="let currentRecipe of childRecipeList">{{currentRecipe.title}} - Rating: {{currentRecipe.rating}} 
       <button class="btn btn-primary" (click)="editButtonHasBeenClicked(currentRecipe)">Edit!</button>
     </li>
   </ul>
