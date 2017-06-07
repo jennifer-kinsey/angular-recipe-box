@@ -9,6 +9,12 @@ import { Recipe } from './recipe.model';
       <button class="btn btn-primary" (click)="editButtonHasBeenClicked(currentRecipe)">Edit!</button>
     </li>
   </ul>
+  <h3>Here are the recipes you ain't done cooked yet:</h3>
+  <ul>
+    <li *ngFor="let currentRecipe of childRecipeList | completeness">{{currentRecipe.title}} - Rating: {{currentRecipe.rating}}
+      <button class="btn btn-primary" (click)="editButtonHasBeenClicked(currentRecipe)">Edit!</button>
+    </li>
+  </ul>
   `
 })
 

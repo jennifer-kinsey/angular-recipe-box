@@ -7,7 +7,7 @@ import { Recipe } from './recipe.model';
     <div>
       <div *ngIf="childSelectedRecipe">
         <h3>{{childSelectedRecipe.title}}</h3>
-        <p>Cooked it before? {{childSelectedRecipe.cooked}}</p>
+        <p>Cooked it before? {{childSelectedRecipe.status}}</p>
         <hr>
         <h3>Edit Recipe</h3>
         <label>Enter Recipe Title:</label>
@@ -15,8 +15,8 @@ import { Recipe } from './recipe.model';
         <label> Enter Recipe Rating (1-10) </label>
         <input type="number" [(ngModel)]="childSelectedRecipe.rating">
         <label>Update Cooked Status</label><br>
-        <input type="radio" [(ngModel)]="childSelectedRecipe.cooked" [value]="true">I Done Cooked Eet <br>
-        <input type="radio" [(ngModel)]="childSelectedRecipe.cooked" [value]="false">Aint cooked it yet Im gunna<br>
+        <input type="radio" [(ngModel)]="childSelectedRecipe.status" [value]="true">I Done Cooked Eet <br>
+        <input type="radio" [(ngModel)]="childSelectedRecipe.status" [value]="false">Aint cooked it yet Im gunna<br>
         <button class="btn btn-success"(click)="doneButtonClicked()">Done</button>
       </div>
     </div>
